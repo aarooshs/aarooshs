@@ -27,7 +27,7 @@
     <div class="title-container">
         <h1 class="title-text">OUR ROBOT</h1>
     </div>
-    <div class="container-md" style="width:50vw;">
+    <div class="container-md" style="width:60vw;">
         <h2>Meet Atlas</h2>
         <div class="row">
             <div class="col">
@@ -37,8 +37,18 @@
                 <div style="margin:auto; width: 20vw;"><img class="robot-img mb-3" src="media/2024_atlas_robot_sfr.JPG"></div>
             </div>
         </div>
-        
-        <p style="width:50vw;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <div style="width:50vw; margin: auto;" id="our-robot"></div>
+    </div>
+    <div class="container-md mb-3">
+        <h2>Crescendo</h2>
+        <div class="row">
+            <div class="col align-items-center" style="display: flex;">
+                <div id="crescendo"></div>
+            </div>
+            <div class="col">
+                <iframe width="453" height="280" src="https://www.youtube.com/embed/9keeDyFxzY4" style="border-radius: 15px; " title="2024 FIRST Robotics Competition CRESCENDO presented by Haas Game Animation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
     <div class="container-md mb-3">
         <h2>Robot Info</h2>
@@ -46,25 +56,27 @@
             <div class="col">
                 <h3>Robot Specifications</h3>
                 <ul style="width:20vw; margin: auto;">
+                    <li>Name: Atlas</li>
                     <li>Dimensions: </li>
                     <li>Weight: </li>
                 </ul>
             </div>
             <div class="col">
                 <h3>Features</h3>
-                <ul style="width:15vw; margin: auto;">
+                <ul style="width:20vw; margin: auto;">
                     <li>4-Wheel Swerve Drive</li>
                     <li>4-Note Autonomous</li>
                     <li>Amp and Speaker Shooter</li>
-                    <li>AI-Assisted Shooting</li>
+                    <li>ML-Assisted Shooting</li>
                     <li>Ground and Source Intake</li>
                     <li>Endgame Climber</li>
                 </ul>
+                <a class="btn btn-primary" href="strategies.html" style="margin: auto;">View Strategies</a>
             </div>
         </div>
     </div>
     <div class="container-md mb-3">
-        <h3>Robot Resources</h3>
+        <!-- <h3>Robot Resources</h3>-->
     </div>
     <div id="footer"></div>
 
@@ -74,6 +86,12 @@
        });
        $(function() {
           $("#footer").load("footer.html");
+       });
+       $(function() {
+          $("#our-robot").load("texts/our-robot.html");
+       });
+       $(function() {
+          $("#crescendo").load("texts/crescendo.html");
        });
      </script>
   </body>
