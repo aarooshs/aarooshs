@@ -1,8 +1,8 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary inter" style="background-color: black;">
+<nav class="navbar navbar-unscrolled navbar-expand-lg bg-body-tertiary inter fixed-top">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-        <a href="index.html" class="navbar-brand"> <img class="logo-on-navbar"src="../media/old-logo.png" alt=""> </a>
+        <a href="index.html" class="navbar-brand"> <img class="logo-on-navbar"src="media/old-logo.png" alt=""> </a>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Our Team
@@ -38,7 +38,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="our-robot.html">Our Robot</a></li>
             <li><a class="dropdown-item" href="strategies.html">Strategies</a></li>
-            <li><a class="dropdown-item" href="documentation.html">Documentation</a></li>
+            <!-- <li><a class="dropdown-item" href="documentation.html">Documentation</a></li> -->
           </ul>
         </li>
 
@@ -53,3 +53,40 @@
     </div>
   </nav>
   <!-- end navbar-->
+
+  <script>
+    const navbar = document.querySelector('.navbar');
+    const navbarBrand = document.querySelector('.logo-on-navbar');
+
+    console.log(navbar);
+    window.addEventListener('scroll', function(){
+      if(window.scrollY >= 56){
+        navbar.classList.remove('navbar-unscrolled');
+        navbar.classList.add('navbar-scrolled');
+        navbarBrand.setAttribute('src', 'media/old-logo-blue.png');
+      }
+      else if(window.scrollY < 56){
+        navbar.classList.remove('navbar-scrolled');
+        navbar.classList.add('navbar-unscrolled');
+        navbarBrand.setAttribute('src', 'media/old-logo.png');
+      }
+    });
+
+    navbarBrand.addEventListener('mouseover', function(){
+      if(navbarBrand.getAttribute('src') == 'media/old-logo-blue.png'){
+        navbarBrand.setAttribute('src', 'media/old-logo.png');
+      }
+      else if(navbarBrand.getAttribute('src') == 'media/old-logo.png'){
+        navbarBrand.setAttribute('src', 'media/old-logo-blue.png');
+      }
+    });
+
+    navbarBrand.addEventListener('mouseleave', function(){
+      if(navbarBrand.getAttribute('src') == 'media/old-logo-blue.png'){
+        navbarBrand.setAttribute('src', 'media/old-logo.png');
+      }
+      else if(navbarBrand.getAttribute('src') == 'media/old-logo.png'){
+        navbarBrand.setAttribute('src', 'media/old-logo-blue.png');
+      }
+    });
+  </script>

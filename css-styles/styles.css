@@ -56,7 +56,7 @@ h3{
 }
 
 .title-container {
-    background-image: url('../media/group-photo2.jpg');
+    background-image: url('../media/backgrounds/group-photo2.jpg');
     background-color: white;
     height: 93vh;
     text-align: center;
@@ -89,7 +89,6 @@ h3{
       pointer-events:none;
 }
 
-
 .nav-link {
     color: white;
 }
@@ -117,12 +116,26 @@ h3{
     padding-left:0%;
 }
 
-.logo-on-navbar:hover {
+.navbar{
+    /*background-color: transparent;*/
+    transition: all 0.5s;
+}
+
+.navbar-unscrolled{
+    background-color: transparent;
+}
+
+.navbar-scrolled{
+    background-color: black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+/*.logo-on-navbar:hover {
     background-image: url('../media/old-logo-blue.png');
     width:7%;
     padding-right: 1%;
     padding-left:0%;
-}
+}*/
 
 /* FOOTER STYLES */
 .footer {

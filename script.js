@@ -1,3 +1,23 @@
+$(function() {
+  $("#nav").load("navbar.html");
+});
+$(function() {
+  $("#footer").load("footer.html");
+});
+
+/*setTimeout(50, function(){
+  const navbar = document.querySelector('.navbar');
+  console.log(navbar);
+  window.addEventListener('scroll', function(){
+    if(window.scrollY >= 56){
+      navbar.classList.remove('navbar-unscrolled');
+      navbar.classList.add('navbar-scrolled');
+      console.log('navbar scrolled');
+    }
+  });
+})*/
+
+
 document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function(){
             document.querySelector('.center-title').classList.add('fade-in-logo');
@@ -28,23 +48,23 @@ $('.dropdown').on('show.bs.dropdown', function() {
 
 
 
-   // Function to handle the intersection observer callback
-   function handleIntersect(entries, observer) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('fade-in');
-        observer.unobserve(entry.target);
-      }
-    });
-  }
-
-  // Create an intersection observer instance
-  const observer = new IntersectionObserver(handleIntersect, { root: null, threshold: 0.3 });
-
-  // Get all elements with the class 'fade-in'
-  const targets = document.querySelectorAll('.fade-in');
-
-  // Observe each target element
-  targets.forEach(target => {
-    observer.observe(target);
+// Function to handle the intersection observer callback
+function handleIntersect(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+      observer.unobserve(entry.target);
+    }
   });
+}
+
+// Create an intersection observer instance
+const observer = new IntersectionObserver(handleIntersect, { root: null, threshold: 0.3 });
+
+// Get all elements with the class 'fade-in'
+const targets = document.querySelectorAll('.fade-in');
+
+// Observe each target element
+targets.forEach(target => {
+  observer.observe(target);
+});
