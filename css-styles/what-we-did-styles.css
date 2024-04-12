@@ -31,3 +31,15 @@ p{
 h3, h2{
     margin-top:5vh;
 }
+
+.number{
+    font-size:xx-large;
+    color: #008B8B;
+}
+
+.number-desc{
+    font-size:large;
+    color:rgba(33, 29, 25, 0.75);
+    text-align:center;
+    font-weight:500;
+}

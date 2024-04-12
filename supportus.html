@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
     
@@ -31,12 +31,12 @@
     <div class="title-container">
         <h1 class="title-text">SUPPORT US</h1>
     </div>
-    <div id="support-us" style="width:75vw; margin: auto;"></div>
+    <div id="support-us" class="appear" style="width:75vw; margin: auto;"></div>
     <!-- Ways to Sponsor -->
     <div class="container-fluid">
-      <h2 style="text-align: center;" class="gajraj-one-regular">How Can You Help?</h2>
+      <h2 style="text-align: center;" class="exo-2 appear">How Can You Help?</h2>
       <!-- Monetary Contributions -->
-      <div class="card mb-3 ways-to-sponsor">
+      <div class="card mb-3 ways-to-sponsor appear">
         <div class="row g-0">
           <div class="col-md-4">
             <img class="card-img ways-to-sponsor-img" src="media/monetary_contributions.png">
@@ -51,7 +51,7 @@
         </div>
       </div>
       <!-- Mentorship -->
-      <div class="card mb-3 ways-to-sponsor">
+      <div class="card mb-3 ways-to-sponsor appear">
         <div class="row g-0">
           <div class="col-md-4">
             <img class="card-img ways-to-sponsor-img" src="media/mentorship.png">
@@ -69,7 +69,7 @@
         </div>
       </div>
       <!-- Feature at a Company Event -->
-      <div class="card mb-3 ways-to-sponsor">
+      <div class="card mb-3 ways-to-sponsor appear">
         <div class="row g-0">
           <div class="col-md-4 inter">
             <img class="card-img ways-to-sponsor-img" src="media/mentorship.png">
@@ -87,7 +87,7 @@
         </div>
       </div>
       <!-- Industry Exposure -->
-      <div class="card mb-3 ways-to-sponsor">
+      <div class="card mb-3 ways-to-sponsor appear">
         <div class="row g-0">
           <div class="col-md-4">
             <img class="card-img ways-to-sponsor-img" src="media/industry_exposure.png">
@@ -106,7 +106,7 @@
     <!-- End Ways to Sponsor -->
     <!-- Expenses Table -->
     <div class="container-fluid">
-      <table class="table table-bordered table-hover" style="width:95vh; margin:auto;">
+      <table class="table table-bordered table-hover appear" style="width:95vh; margin:auto;">
         <thead>
           <tr>
             <th>Item</th>
@@ -143,8 +143,8 @@
     </div>
     <!-- End Expenses Table -->
     <!-- Sponsorship Tiers -->
-    <div class="container-fluid">
-      <h3></h3>
+    <div class="container-fluid appear">
+      <h3>Sponsorship Tiers</h3>
       <div class="row">
         <!-- Bronze -->
         <div class="col card sponsor-level" style="background-image: linear-gradient(to right, white, #CD7F32);">
@@ -217,6 +217,9 @@
        $(function() {
           $("#support-us").load("texts/support-us-text.html");
        });
+
+       const appearItems = $('.appear');
+       
      </script>
   </body>
 </html>

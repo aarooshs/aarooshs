@@ -4,6 +4,7 @@ body {
     height: 100vh;
     background-color: white;
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 p, li{
@@ -14,12 +15,12 @@ p, li{
 }
 
 h2{
-    font-family: "Gajraj One", sans-serif;
+    font-family: "Exo 2", sans-serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
     font-size: 4rem;
-    color:#2294a8;
+    color:#008B8B;
 }
 
 h3{
@@ -29,7 +30,7 @@ h3{
     font-weight: 400;
     font-style: normal;
     font-size:3rem;
-    color:#2294a8;
+    color:#008B8B;
 }
 
 .card-title{
@@ -38,7 +39,7 @@ h3{
     font-weight: 500;
     font-style: normal;
     text-align: center;
-    color: #2294a8;
+    color: #008B8B;
 }
 
 .text-body-secondary{
@@ -183,11 +184,11 @@ h3{
 
 /* FONTS */
 
-.gajraj-one-regular {
-    font-family: "Gajraj One", sans-serif;
+.exo-2 {
+    font-family: "Exo 2", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
+}
 
 .sofia-sans {
     font-family: "Sofia Sans", sans-serif;

@@ -9,7 +9,7 @@
       <link rel="stylesheet" href="css-styles/what-we-did-styles.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
       <title>2854 The Prototypes</title>
@@ -74,21 +74,21 @@
             </div>
         </div>
     </div>
-    <div class="container-md">
-        <h2>Prototypes in Vietnam</h2>
-        <p></p>
-        <div class="container-sm">
+    <div class="container-md" style="width: 100vw;">
+        <h2>Prototypes Around The World</h2>
+        <div class="container-sm" style="width:65vw; margin:auto;">
             <h3>FRC 6520 GreenAms Robotics Team</h3>
             <div class="row">
                 <div class="col">
                     <ul class="list">
-                        <li>We created the first branch of the Society of
+                        <li>
+                            We created the first branch of the Society of
                             Women Engineers (SWE) in Vietnam by
                             collaborating with the first and only Vietnam
                             FRC team 6520.
                         </li>
                         <li>
-                            With FRC 6520 we hosted meetings to spread inclusivity in STEM.
+                            With FRC 6520, we hosted meetings to spread inclusivity in STEM.
                         </li>
                         <li>
                             We guided 6250 in preparing for their competition in Australia-Southern Cross Regional.
@@ -101,14 +101,13 @@
                 </div>
             </div>
         </div>
-        <div class="container-sm" style="margin-bottom: 5vh;">
+        <div class="container-sm" style="margin-bottom: 5vh;  width:65vw; margin:auto;">
             <h3>FTC 21300 Robots in a Nutshell (RIAN)</h3>
             <div class="row">
                 <div class="col">
                     <ul class="list">
-                        <li>We started the first-ever FTC team in
-                            Vietnam and provided mentorship to
-                            spread FIRST.
+                        <li>
+                            We started the first-ever FTC team in Vietnam and provided mentorship to spread FIRST.
                         </li>
                         <li>
                             We reached out to FIRST Secured and helped them get a spot at FTC regional in India.
@@ -122,17 +121,19 @@
             </div>
         </div>
     </div>
-    <div class="container-md mb-3">
+    <div class="container-md mb-3" style="width:100vw;">
         <h2>Women in STEM Speaker Event</h2>
-        <div class="row">
+        <div class="row" style="width: 65vw; margin: auto;">
             <div class="col">
                 <ul class="list">
-                    <li>We invited a Stanford alumni/lecturer, and a few Berkeley and SJSU
+                    <li>
+                        We invited a Stanford alumni/lecturer, and a few Berkeley and SJSU
                         students to join us and spread awareness about the urgent issue of diversity
                         in STEM.
                     </li>
                     <li>
-                        This event reached over 200 students and inspired and impacted the community of women in STEM at Evergreen Valley High School. 
+                        This event reached over 200 students and inspired and impacted the community of women in STEM at Evergreen Valley
+                        High School.
                     </li>
                     <li>
                         We collaborated with Artemis (FTC team founded by us) to host this event.
@@ -144,21 +145,83 @@
             </div>
         </div>
     </div>
-    <div class="container-md mb-3">
+    <div class="container-md mb-3" style="width:100vw;">
         <h2>Community Outreach</h2>
+        <div class="row" style="width:65vw; margin: auto;">
+            <div class="col">
+                <ul class="list">
+                    <li>
+                        Our community outreach consisted of several workshops for kids ages 5-15, teaching and inspiring them in engineering
+                        and programming, creating a community for children to become the best they can be in their STEM journey.
+                    </li>
+                    <li>
+                        We have successfully partnered with SpectroCloud, a local STEM company, and held weekly development meetings with
+                        our team and guest speakers.
+                    </li>
+                    <li>These events spark innovation and passion throughout our team and our community.</li>
+                </ul>
+                <!-- <div id="outreach-2"></div> -->
+            </div>
+            <div class="col">
+                <img class="img" src="media/outreach/outreach.png">
+            </div>
+        </div>
+        <h3>By The Numbers</h3>
+        <div class="row" id="by-the-numbers" style="width:100vw; margin:auto;">
+            <div class="col">
+                <span><p id="school" class="number">1+</p><p class="number-desc">students reached through local school outreach programs.</p></span>
+            </div>
+            <div class="col">
+                <span><p id="mech" class="number">1+</p><p  class="number-desc">students reached through mechanical and CAD workshops.</p></span>
+            </div>
+            <div class="col">
+                <span><p id="prog" class="number">1+</p><p  class="number-desc">students reached through online programming workshops.</p></span>
+            </div>
+        </div>
     </div>
     <div id="footer"></div>
     
     <script>
-       $(function() {
-          $("#nav").load("navbar.html");
-       });
-       $(function() {
-          $("#footer").load("footer.html");
-       });
-       $(function() {
-          $("#outreach").load("texts/outreach.html");
-       });
+        const numberContainer = document.querySelector('#by-the-numbers');
+        const footer = document.querySelector('#footer');
+        var i = 1;
+        var k = 1;
+        var a = 1;
+
+        window.addEventListener('scroll', () => {
+            var scrolled = window.scrollY;
+            const elementPosition = numberContainer.offsetTop;
+            scrolled = scrolled+numberContainer.offsetHeight+footer.offsetHeight+170;
+            
+            if(scrolled >= elementPosition){
+                increaseNumbers(200, i, '#school');
+                increaseNumbers(50, k,  '#mech');
+                increaseNumbers(500, a, '#prog');
+                window.removeEventListener('scroll', function(){});
+            }
+        });
+
+        function increaseNumbers(j, n, selector){
+            if(n<j){
+                n++;
+                $(selector).text(n+"+");
+                setTimeout(increaseNumbers, 2500/j, j, n, selector)
+            }
+            else{
+                console.log('clearing interval');
+                clearInterval();
+            }
+        }
+
+        $(function() {
+            $("#nav").load("navbar.html");
+        });
+        $(function() {
+            $("#footer").load("footer.html");
+        });
+        $(function() {
+            $("#outreach").load("texts/outreach.html");
+        });
      </script>
   </body>
 </html>
